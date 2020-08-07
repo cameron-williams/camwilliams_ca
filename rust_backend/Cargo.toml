@@ -1,0 +1,14 @@
+[package]
+name = "rust_backend"
+version = "0.1.0"
+authors = ["Cam Williams <cam@camwilliams.ca>"]
+edition = "2018"
+
+
+[dependencies]
+actix-web = "2.0"
+actix-rt = "1.0"
+lazy_static = "1.4.0"
+actix-files = "0.2.2"
+log = "0.4.0"
+env_logger = "0.7.1"
