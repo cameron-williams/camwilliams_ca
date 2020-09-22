@@ -52,18 +52,13 @@ async fn static_files(req: HttpRequest) -> Result<NamedFile> {
 async fn resume() -> Result<NamedFile> {
     let mut p = BASE_DIR.clone();
     p.push(format!("frontend/dist/static/resume.pdf"));
-    info!("{:?}", p);
     Ok(NamedFile::open(p)?)
 }
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
     env_logger::init();
-
-    info!("Hello world.");
-
-    info!("Running from {:?}", BASE_DIR.as_path());
-
+    info!("Listening on 127.0.0.1:3000");
     HttpServer::new(|| App::new().service(index).service(static_files).service(resume))
         .bind("127.0.0.1:3000")?
         .run()
