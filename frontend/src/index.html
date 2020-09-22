@@ -1,22 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Getting Started</title>
   </head>
-  <body>
-    <h2>Test</h2>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                One of three columns
+  <body data-spy="scroll" data-target="#main-nav">
+    <!-- Main navbar, set up with data-spy on scroll -->
+    <nav id="main-nav" class="navbar justify-content-center fixed-top">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-me">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Welcome image, 100% w/h based off current viewport. -->
+    <div
+      id="home"
+      class="container-fluid vh-100 vw-100 d-flex align-items-center justify-content-center"
+      style="background-image: url('/static/0427192025b_HDR.jpg')"
+    >
+      <h2 class="spread-text">Cameron Williams</h2>
+    </div>
+
+    <!-- About/welcome to my website section-->
+    <div id="about-me" class="container-fluid min5">
+      
+      <div id="intro-about-div" class="row">
+        <p id="intro-about-p">
+          Hi. I'm Cameron.
+          <br />
+          I am junior software developer with a passion for all things back-end.
+          <br />
+          <br />
+          This site serves the purpose of a basic intro of who I am and what I'm in
+          to, as well as providing a place to present my current portfolio and
+          resume.
+          <br />
+          <br />
+          <br />
+          I am a firm believer in efficiency, as such I will keep the website dialogue to the most minimal possible.
+          <br />
+          If you have any questions, would just like to get to know me better feel, or just want to chat, free to <a href="#contact-me">contact me</a> at any time.</p>
+        </p>
+      </div>
+    </div>
+
+    <!-- Portfolio section -->
+    <div
+      id="portfolio"
+      class="container-fluid min5"
+    >
+      <div id="portfolio-div" class="row d-block">
+        
+        <h2>Portfolio</h2>
+
+        
+        <div class="row" id="portfolio-cols">
+
+        
+          <!-- camwilliams.ca-->
+          <div class="col">
+            <div class="card" style="width:18rem;">
+            <div class="card-body">
+              <h5 class="card-title">camwilliams.ca</h5>
+              <p class="card-text">The repository for this website. Actix-web backend(Rust) with a webpack/bootstrap frontend.</p>
+              <a href="#" target="_blank" class="btn btn-primary">Github</a>
             </div>
-            <div class="col-sm">
-                Two of three columns
             </div>
-            <div class="col-sm">
-                Three of three columns
+          </div>
+
+          <!-- barscreen -->
+          <div class="col">
+            <div class="card" style="width:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Barscreen</h5>
+                <p class="card-text">A Roku/Connected TV application business idea I worked on with a friend. This repo holds the web-based part of that app, containing the client login/management and a basic API which the Roku apps would call.</p>
+                <a href="https://github.com/cameron-williams/barscreen-web" target="_blank" class="btn btn-primary">Github</a>
+                <a href="#" class="btn btn-primary">Live Version</a>
+              </div>
             </div>
+          </div>
+
+          <!-- rgdrive -->
+          <div class="col">
+            <div class="card" style="width:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">rgdrive</h5>
+                <p class="card-text">A basic tool I created to start learning Rust. Syncs files/folders between a Google Drive account and a local computer filesystem. Works similar to how dropbox local folders work where you add folders/individual files and file changes are tracked and synced.</p>
+                <a href="https://github.com/cameron-williams/rgdrive" target="_blank" class="btn btn-primary">Github</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card" style="width:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">More to come...</h5>
+                <p class="card-text"></p>
+                <a href="#" target="_blank" class="btn btn-primary disabled">Github</a>
+              </div>
+            </div>
+          </div>
         </div>
+        
+      </div>
+    
+    </div>
+
+    <!-- Resume section -->
+    <div
+      id="resume"
+      class="container-fluid min5"
+    >
+    <div id="resume-div" class="row d-block">
+      <h2>Resume</h2>
+      
+      <object data="/resume" type="application/pdf" width="100%" height="1000px"> 
+        <p style="text-align: center; padding-top:50px;">It appears your browser doesn't support embedded pdf files.
+         No problem. You can <a href="/resume">click here to
+        download the PDF file.</a></p>  
+      </object>
+      
+    </div>
+  </div>
+
+    <div
+      id="contact-me"
+      class="container-fluid min5"
+    >
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me on any of the following platforms</p>
+
+      
+      <div class="row">
+
+      <!-- Email -->
+      <div class="col">
+        <div class="card contact-card">
+          <img src="/static/email.png" class="card-img-top">
+          <div class="card-body">
+            <!-- <h5 class="card-tittle">Email</h5> -->
+            <a href="mailto:cam@camwilliams.ca" class="btn btn-success">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col">
+        <div class="card contact-card">
+          <img src="/static/linkedin.png" class="card-img-top">
+          <div class="card-body">
+            <!-- <h5 class="card-tittle">Email</h5> -->
+            <a href="https://linkedin.com/in/cameron-williams-03b133133" target="_blank" class="btn btn-success">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skype -->
+      <div class="col">
+        <div class="card contact-card">
+          <img src="/static/skype.png" class="card-img-top">
+          <div class="card-body">
+            <!-- <h5 class="card-tittle">Email</h5> -->
+            <a href="#" class="btn btn-success disabled">live:.cid.b3121f9a84e62fa8</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     </div>
   </body>
 </html>

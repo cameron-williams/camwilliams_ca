@@ -22,6 +22,19 @@ module.exports = {
         },
       },
 
+      // Fonts
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            }
+          }
+        ]
+      },
+
       // CSS
       {
         test: /\.css$/i,
