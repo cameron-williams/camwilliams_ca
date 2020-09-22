@@ -31,6 +31,8 @@ $ git clone git@github.com:cameron-williams/camwilliams_ca.git
 
 $ cd camwilliams_ca
 
+$ (cd frontend && npm install)
+
 $ make run
 => http://127.0.0.1:3000/
 ```
