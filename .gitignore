@@ -4,4 +4,4 @@ node_modules
 target
 .venv
 *.pyc
-dist/
+frontend/dist/
