@@ -11,3 +11,16 @@ Now including:
 - multiple different back ends
 
 It is currently a work in progress.
+
+
+To run this repo locally you will need to have cargo+rust installed (min version 1.44.1).
+
+```sh
+$ rustc --version && cargo --version
+rustc 1.44.1 (c7087fe00 2020-06-17)
+cargo 1.44.1 (88ba85757 2020-06-11)
+$ git clone git@github.com:cameron-williams/camwilliams_ca.git
+$ cd camwilliams_ca
+$ make run
+=> http://127.0.0.1:3000/
+```
